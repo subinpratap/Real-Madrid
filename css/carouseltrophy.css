@@ -1,0 +1,54 @@
+#overflow{
+	width: 980px;
+    height: 230px;
+    overflow: hidden;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#carousel{
+	    padding: 6%;
+    text-align: center;
+}
+
+#inner{
+	width: 1820px;
+    height: 200px;
+	float:left;
+	    /*padding: 10px;*/
+	margin-left:0px;
+}
+
+#inner img{
+	height: 222px;
+    width: 140px;
+	float:left;
+}
+
+.show1{
+	display:block;
+}
+
+.hide{
+	display:none;
+}
+
+#carousel a{
+	display: inline-block;
+    vertical-align: middle;
+}
+
+.fa-left{
+	/*float: left;
+    width: 3%;
+    z-index: 9;*/
+	width:35px;
+}
+
+.fa-right{
+    /*margin-top: 4%;
+    position: absolute;
+    margin-left: 1%;
+	    width: 3%; img width dont give in %*/
+		width:35px;
+}
