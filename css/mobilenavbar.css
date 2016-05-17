@@ -13,7 +13,7 @@ html, body {
 	transition: left 0.5s ease-in-out;
 }
 
-.nav > li {
+.nav  li {
     border-bottom: 1px solid #333333;
 }
 
@@ -96,4 +96,8 @@ html, body {
 	padding-left: 5px;
 	padding-top:15px;
 	color:white;
+}
+
+.navbar-header {
+    float: left;
 }
