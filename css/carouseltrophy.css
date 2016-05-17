@@ -1,13 +1,13 @@
 #overflow{
-	width: 980px;
-    height: 230px;
+	width: 970px;
+    height: 275px;
     overflow: hidden;
 	display:inline-block;
 	vertical-align:middle;
 }
 
 #carousel{
-	    padding: 6%;
+	    padding-top: 5%;
     text-align: center;
 }
 
@@ -15,7 +15,6 @@
 	width: 1820px;
     height: 200px;
 	float:left;
-	    /*padding: 10px;*/
 	margin-left:0px;
 }
 
@@ -39,16 +38,10 @@
 }
 
 .fa-left{
-	/*float: left;
-    width: 3%;
-    z-index: 9;*/
-	width:35px;
+	width:25px;
+	position:absolute;
 }
 
 .fa-right{
-    /*margin-top: 4%;
-    position: absolute;
-    margin-left: 1%;
-	    width: 3%; img width dont give in %*/
-		width:35px;
+		width:25px;
 }

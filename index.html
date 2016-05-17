@@ -2,26 +2,38 @@
 
 <html>
 <head>
-	<link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Oswald">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	
-	<link href = "css/realmadrid.css" rel = "stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link href = "css/realmadrid2.css" rel = "stylesheet" type="text/css" />
 	<link href = "css/carousel.css" rel = "stylesheet" type="text/css" />
 	<link href = "css/carouseltrophy.css" rel = "stylesheet" type="text/css" />
-	
+	<link href="css/mobilenavbar.css" rel="stylesheet" type="text/css"/>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script src = "js/realmadrid.js" type="text/javascript" ></script>
 	<script src = "js/carousel.js" type="text/javascript" ></script>
 	<script src = "js/carouseltrophy.js" type="text/javascript" ></script>
+	<script src="js/bootstrap.js"></script>
+	<script src = "js/media.js" type="text/javascript" ></script>
+	<script src="js/mobilenavbar.js" rel="stylesheet"></script>
+	
 
 </head>
 
 <body id="body">
 
-	<div id="container">
-	
-		<div id="wrapper">
+	<div id=container>
+		
+		<div id="mobile-topbar">
+			<i class="fa fa-bars fa-2x" id="menu" aria-hidden="true" style="vertical-align: text-top;margin-left: 16px;"></i>
+			<div id="mobile-topbar-img">
+				<img src="img/header_logo.png" width="220" height="55"/>
+			</div>
+		</div>
+		
+		<div id="wrapper" class="mobile_hide">
 			
 			<div id="header">
 				
@@ -29,19 +41,11 @@
 					<p>LIGA BBVA</p>
 					<p>20-04-2016</p>
 					<p>22:00</p>
-					<img src="img/rm_pic.png"  height="27" width="27">
-					<img src="img/villarreal_pic.png" height="27" width="27" style="padding-right: 16px;">
+					<div id="matchsummary-img">
+						<img src="img/rm_pic.png"  height="27" width="27">
+						<img src="img/villarreal_pic.png" height="27" width="27">
+					</div>
 				</div>	
-				
-				<!----> 
-				
-				<div id="matchsummary2" style="display:none;">			
-					<p>LIGA ENDESA</p>
-					<p>17-04-2016</p>
-					<p>19:30</p>
-					<img src="img/rm_pic.png"  height="27" width="27">
-					<img src="img/villarreal_pic.png" height="27" width="27" style="padding-right: 16px;">
-				</div>
 					
 				<div class="topsponsors">
 					
@@ -56,29 +60,149 @@
 					<p style="border:none;">SPONSORS</p>
 				</div>
 				
-				<!--<i class="fa fa-angle-right" aria-hidden="true" style="display:table-cell;padding-left: 50px;"></i>-->
 				<span style="color:white;display:table-cell;margin-top:0px;vertical-align: middle;" id="click">&#10095</span>
 			</div> 				
 		</div>
 		
-		<div id="header2">
-				
-				<img src="img/header_logo.png" style="margin-top: 14px;display: inline-block;margin-right: 2%;">
-				
-				<ul>
-					<li><a href="http://www.realmadrid.com/en/about-real-madrid/honours/football">HONOURS</a></li>
-					<li><a href="http://www.realmadrid.com/en/about-real-madrid/foundation">FOUNDATION</a></li>
-					<li><a href="http://www.realmadrid.com/en/fans/madridistas/international" style="color: #1D7DC1;">MADRIDISTAS</a></li>
-					<li><a href="http://www.realmadrid.com/en/tickets/bernabeu-tour" style="color: #1D7DC1;">BERNABEU TOUR</a></li>
-					<li><a href="http://www.realmadrid.com/en/about-real-madrid/communication-and-press/press-releases">PRESS</a></li>
-					<li><a href="http://www.realmadrid.com/en/signup">SIGN UP</a></li>
-					<li><a href="http://www.realmadrid.com/en/login">LOGIN</a></li>
-					<li><a href="#">EN</a></li>
-				</ul>
-			
+			<div id="header2" class="mobile_hide">
+					
+					<img src="img/header_logo.png" style="margin-top: 14px;display: inline-block;margin-right: 2%;" />
+					
+					<ul>
+						<li><a href="http://www.realmadrid.com/en/about-real-madrid/honours/football">HONOURS</a></li>
+						<li><a href="http://www.realmadrid.com/en/about-real-madrid/foundation">FOUNDATION</a></li>
+						<li><a href="http://www.realmadrid.com/en/fans/madridistas/international" style="color: #1D7DC1;">MADRIDISTAS</a></li>
+						<li><a href="http://www.realmadrid.com/en/tickets/bernabeu-tour" style="color: #1D7DC1;">BERNABEU TOUR</a></li>
+						<li><a href="http://www.realmadrid.com/en/about-real-madrid/communication-and-press/press-releases">PRESS</a></li>
+						<li><a href="http://www.realmadrid.com/en/signup">SIGN UP</a></li>
+						<li><a href="http://www.realmadrid.com/en/login">LOGIN</a></li>
+						<li><a href="#">EN</a></li>
+					</ul>
 			</div>
+		
+		
+		<nav class = "navbar navbar-default mob-navbar" role = "navigation">
+	   
+		   <div class = "navbar-header">
+			
+		   </div>
+		   
+			<div class = "collapse navbar-collapse" id = "example-navbar-collapse">
 
-		<div class="dropdown">
+				<ul class = "nav navbar-nav">
+					<li><a href = "#">HOME</a></li>
+
+					<li class = "dropdown">
+						<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">FOOTBALL <b class = "caret"></b> </a>
+
+						<ul class = "dropdown-menu">
+							<li><a href = "#">LATEST</a></li>
+							<li><a href = "#">FIXTURES</a></li>
+							<li><a href = "#">NEWS</a></li>
+							<li><a href = "#">VIDEO GALLERY</a></li>
+							<li><a href = "#">PHOTO GALLERY</a></li>
+							<li><a href = "#">SQUAD</a></li>
+							<li><a href = "#">ACADEMY</a></li>
+							<li><a href = "#">HISTORY</a></li>
+						</ul>
+					</li>
+
+
+					<li class = "dropdown">
+						<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">BASKETBALL <b class = "caret"></b> </a>
+
+						<ul class = "dropdown-menu">
+							<li><a href = "#">LATEST</a></li>
+							<li><a href = "#">FIXTURES</a></li>
+							<li><a href = "#">NEWS</a></li>
+							<li><a href = "#">VIDEO GALLERY</a></li>
+							<li><a href = "#">PHOTO GALLERY</a></li>
+							<li><a href = "#">BARCLAYS CARDCENTER</a></li>
+							<li><a href = "#">HISTORY</a></li>
+						</ul>
+					</li>
+
+
+					<li class = "dropdown">
+						<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">ABOUT REAL MADRID <b class = "caret"></b> </a>
+
+						<ul class = "dropdown-menu">
+							<li><a href = "#">NEWS</a></li>
+							<li><a href = "#">THE CLUB</a></li>
+							<li><a href = "#">HONOURS</a></li>
+							<li><a href = "#">HISTORY</a></li>
+							<li><a href = "#">EVENTS</a></li>
+							<li><a href = "#">SANTIAGO BERNABEU STADIUM</a></li>
+							<li><a href = "#">FOUNDATION</a></li>
+							<li><a href = "#">NEWS</a></li>
+							<li><a href = "#">CONTACT & PRESS</a></li>
+						</ul>
+					</li>
+
+					<li class = "dropdown">
+						<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">MEMBERS <b class = "caret"></b> </a>
+
+						<ul class = "dropdown-menu">
+							<li><a href = "#">NEWS</a></li>
+							<li><a href = "#">MEMBER SERVICES</a></li>
+							<li><a href = "#">MEMBERS</a></li>
+							<li><a href = "#">SEASON TICKET HOLDER</a></li>
+							<li><a href = "#">ARRANGEMENTS</a></li>
+							<li><a href = "#">BENEFITS & DISCOUNTS</a></li>
+							<li><a href = "#">REGULATIONS</a></li>
+						</ul>
+					</li>
+
+					<li class = "dropdown">
+						<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">FAN ZONE <b class = "caret"></b> </a>
+
+						<ul class = "dropdown-menu">
+							<li><a href = "#">MADRIDISTAS</a></li>
+							<li><a href = "#">VIDEOS</a></li>
+							<li><a href = "#">PHOTOS</a></li>
+							<li><a href = "#">FAN CLUBS</a></li>
+							<li><a href = "#">SOCIAL NETWORKS</a></li>
+							<li><a href = "#">REALMADRID TV</a></li>
+							<li><a href = "#">GAMES</a></li>
+							<li><a href = "#">WALLPAPERS</a></li>
+							<li><a href = "#">PUBLICATIONS</a></li>
+							<li><a href = "#">KID'S ZONE</a></li>
+						</ul>
+					</li>
+					
+					<li><a href = "#">RMTV</a></li>
+					
+					<li><a href = "#"><span style="color:#F8F9FA;">TICKETS</span></a></li>
+					
+					<li><a href = "#"><span style="color:#F8F9FA;">SHOP</span></a></li>
+					
+					<li><a href = "#"><span style="color:#F8F9FA;">HOSPITALITY</span></a></li>
+				</ul>
+				
+				<ul id="nav2">
+					<li><a href = "#">HONOURS</a></li>
+					<li><a href = "#">FOUNDATION</a></li>
+					<li><a href = "#">MADRIDISTAS</a></li>
+					<li><a href = "#">BERNABEU TOUR</a></li>
+					<li><a href = "#">PRESS</a></li>
+					<li><a href = "#">SIGN UP</a></li>
+					<li><a href = "#">LOGIN</a></li>
+				</ul>
+				
+				<div id="mobile-sponsors">
+					<div id="mobile-sponsors-logo">
+						<a href="#"><img src="img/emirates.png" width="65" height="35"></a>
+						<a href="#"><img src="img/adidas.jpg" width="65" height="35"></a>
+						<a href="#"><img src="img/bwin.jpg" width="65" height="35"></a>
+					</div>
+					<a href="#">SPONSORS</a>
+				</div>
+			</div>	
+		</nav>
+
+		
+		
+		<div class="dropdowns mobile_hide">
 			
 			<ul>
 				<li class="dropdowncon" data-target="#home">
@@ -222,9 +346,8 @@
 				<li class="rightbaritems"><a href="#" data-target="#shop" style="color: #2982C0;">SHOP</a></li>
 				<li><a href="#" data-target="#shop"><i id="searchopen" class="fa fa-search fa-lg" aria-hidden="true"></i></a></li>
 			</ul>
-
-			
 		</div>
+		
 		
 		<div id="searchdiv">
 				<input type="search" id="search" placeholder="Search">
@@ -234,56 +357,114 @@
 		
 		<div id="highlightsbanner">
 		
-			<img src="img/banner.jpg" style="width: 100%; height: 400px;">
+			<img src="img/banner1.jpg" style="width: 100%; height: 400px;">
 			
 		</div>
+		
 		
 		<div id="fixture" >
 		
 			<div id="fl" style="min-height: 333px;">
-				<p style="padding-left: 14px;padding-top: 0px;float: left;margin-top: 14px;">NEXT FIXTURE</p>
 				
-				<p id="f1p">
-					<span>LIGA BBVA</span>
-					<span id="bef">MATCHDAY 34</span>
-					<span id="bef">2016/04/20</span>
-				</p>
 				
-				<p style="text-align: center; font-weight: normal; color: #777777;margin-right: 100px;margin-top: -3px;font-size: 0.9em;">SANTIAGO BERNABEU</p>
-				
-				<div id="teams">
-					<div id="leftteam">
-						<p>Real Madrid</p>
-						<img src="img/rma_media.png">
-						<p id="teamsp" style="position: relative;top: 161px;left: 11px;">22:00H	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTV</p>
+				<div id="f1p">
+					<span style="display:block;margin-right: 18%;margin-left: 1%; color: #565656;">NEXT FIXTURE</span>
+					<div id="matchday-details">
+						<span>LIGA BBVA</span>
+						<span id="bef">MATCHDAY 34</span>
+						<span id="bef">2016/04/20</span>
 					</div>
-					
-					<div id="rightteam">
-						<p>Villarreal</p>
-						<img src="img/villarreal_media.png">
-						<a href="#"><p>SEE DETAILS</p></a>
-					</div>
-					
-					<div id="share">
-					<i class="fa fa-share-square-o fa-lg" aria-hidden="true" style="float: left;padding-right: 6px;position: relative;bottom: -14px;left: 17px;"></i>
-					<p>SHARE</p>
-					<ul class="sharebar">
-						<li><a href="#"><img src="img/fb.jpg" height=39px;width=39px;></a></li>
-						<li><a href="#"><img src="img/twitter.jpg" height=39px;width=39px;></a></li>
-						<li><a href="#"><img src="img/googleplus.jpg" height=39px;width=39px;></a></li>
-						<li><a href="#"><img src="img/pinterest.jpg" height=39px;width=39px;></a></li>
-					</ul>
-					</div>
-					
+					<p>SANTIAGO BERNABEU</p>
 				</div>
 				
 				
 				
+				<div id="teams">
+					<div id="leftteam">
+						<div id="leftteam-details">
+							<p>Real Madrid</p>
+							<img src="img/rma_media.png">
+						</div>
+					</div>
+					
+					<div id="rightteam">
+						<div id="rightteam-details">
+							<img src="img/villarreal_media.png">
+							<p>Villarreal</p>
+						</div>
+					</div>
+					
+					<div id="rightteam-mobile">
+						<div id="rightteam-details">
+							<p>Villarreal</p>
+							<img src="img/villarreal_media.png">
+						</div>
+					</div>
+					
+					<div id="fixture-time">
+						<p>22:00H	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTV</p>
+						<a href="#"><p>SEE DETAILS</p></a>
+					</div>
+					
+					<div id="share">
+						<i class="fa fa-share-square-o fa-lg fixtures-share" aria-hidden="true"></i>
+						<p>SHARE</p>
+						<ul class="sharebar">
+							<li><a href="#"><img src="img/fb.jpg" height=39px;width=39px;></a></li>
+							<li><a href="#"><img src="img/twitter.jpg" height=39px;width=39px;></a></li>
+							<li><a href="#"><img src="img/googleplus.jpg" height=39px;width=39px;></a></li>
+							<li><a href="#"><img src="img/pinterest.jpg" height=39px;width=39px;></a></li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<div>
+					
+				</div>
+				
 			</div>
 			
-			<div id="fr" style="min-height: 333px;">
+			<div id="fr" class="mobile-hide" style="min-height: 333px;">
 			
 			</div>
+			
+		</div>
+		
+		<div class="clear">
+			
+		</div>
+		
+		<div id="mobile-calendar">
+				
+			<div id="mob-cal-header">
+				<a href="http://www.realmadrid.com/en/about-real-madrid/events"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i><p style="display: inline-block;padding-left: 10px;vertical-align: middle;">REAL MADRID CALENDAR</p></a>
+			</div>	
+			
+				<ul>
+					<li>
+						<div class="schedule-header">
+							<strong>CHAMPIONS LEAGUE</strong>
+							<time> 28-05-2016 - 20:45</time>
+						</div>
+						
+						<div class="schedule-teams">
+							<div class="schedule-teams-logo">
+								<img src="img/Rm_game.png" width="39" height="39">
+								<img src="img/atleti_game.png" width="39" height="39">
+							</div>
+							
+							<a href="#">
+								<span class="schedule-teams-name">	
+									<strong>Real Madrid</strong>
+									<strong>Athletico de Madrid</strong>
+								<span>
+							</a>
+						</div>
+					</li>
+				</ul>
+			
+			
 		</div>
 		
 		<div class="section" id="content">
@@ -317,7 +498,7 @@
 						
 					</div>
 					
-					<div class="news" style="margin-left: 25px;">
+					<div class="news news-margin">
 						<img src="img/news2.jpg" style="width: 100%;" height="126">
 						
 						<div id="stuff">
@@ -365,7 +546,7 @@
 						
 					</div>
 					
-					<div class="news" style="margin-left: 25px;margin-top: 21px;">
+					<div class="news news-margin" style="margin-top: 21px;">
 						<img src="img/news4.jpg" style="max-width: 100%;" height="126">
 						
 						<div id="stuff">
@@ -391,83 +572,13 @@
 					
 				</div>
 				
-				<div id="rightrow">
+				<div id="rightrow" class="mobile-hide">
 				
 					<div id="calendar">
 						<a href="http://www.realmadrid.com/en/about-real-madrid/events"><i class="fa fa-calendar fa-2x" aria-hidden="true" style="position: relative;top: 14px;left: 5%;"></i><p>REAL MADRID CALENDAR</p></a>
 					</div>
 					
-					<ul style="background-color: #F6F6F6;">
-						<li style="padding-top: 1px;margin-top: -11px;">
-							<div style="height: 95px;">
-								<div>
-									<p>LIGA BBVA&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp20-04-2016 - 22:00</p>
-									
-									<img src="img/rma_fix.png" width="39" height="44">
-									<img src="img/villarreal_fix.png" width="39" height="44">
-									
-									<a class="vs" href="#">
-										<p>Real Madrid</p>
-										<p>Villarreal</p>
-									</a>	
-									
-									<p class="tick"><a href="#" style="color: #0255a5;">TICKETS</p></a>
-									
-								</div>
-								
-								<div>
-									
-								</div>
-							</div>
-						</li>
-						
-						<li>
-							<div style="height: 95px;padding-top: 17px;padding-bottom: 15px;">
-								<div>
-									<p>LIGA BBVA&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp23-04-2016 - 16:00</p>
-									
-									<img src="img/rma_fix.png" width="39" height="44">
-									<img src="img/rayo_fix.png" width="39" height="44" style="float: left;">
-									
-									<a class="vs" href="#">
-										<p>Rayo Vallecano</p>
-										<p>Real Madrid</p>
-									</a>	
-									
-									<p class="tick"><a href="#" style="color: #0255a5;">TICKETS</p></a>
-									
-								</div>
-								
-								<div>
-									
-								</div>
-							</div>
-						</li>
-						
-						<li>
-							<div style="height: 95px;padding-top: 17px;padding-bottom: 15px;">
-								<div>
-									<p>LIGA BBVA&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp26-04-2016 - 20:45</p>
-									
-									<img src="img/rma_fix.png" width="39" height="44">
-									<img src="img/manc_fix.png" width="39" height="44" style="float: left;">
-									
-									<a class="vs" href="#">
-										<p>Manchester City</p>
-										<p>Real Madrid</p>
-									</a>	
-									
-									<p class="tick"><a href="#" style="color: #0255a5;">TICKETS</p></a>
-									
-								</div>
-								
-								<div>
-									
-								</div>
-							</div>
-						</li>
-						
-					</ul>
+					
 					
 				</div>
 				
@@ -475,9 +586,10 @@
 		
 		</div>
 		
+		
 		<div class="clear"></div> 	
 		
-		<div id="legends">
+		<div id="legends" class="mobile-hide">
 			<div id="legend_in" style="display: inline-block;">
 					<a href="#"><div class="legend" style="border-top: 2px solid;border-top: 2px solid #8C7E44;">
 						<p class="leg">FOOTBALL HISTORY</p>
@@ -497,7 +609,7 @@
 						<p>Real Madrid Basketball History</p>
 					</div></a>
 					
-					<a href="#"><div class="legend" style="border-top: 2px solid;border-top: 2px solid #8C7E44;">
+					<a href="#"><div class="legend" style="border-top: 2px solid;border-top: 2px solid #8C7E44;margin-right: 0px;">
 						<p class="leg">BASKETBALL LEGENDS</p>
 						<div><img src="img/blegends.jpg" width="218" height="258"></div>
 						<p>Legendary Real Madrid players</p>
@@ -505,9 +617,54 @@
 			</div>
 		</div>
 		
+		<div id="mobile-legends">
+			<div id="mobile-legend-in">
+					<a href="#">
+						<div class="mobile-legend">
+							<div class="legend-image"><img src="img/fhistory.jpg" width="150" height="170"></div>
+							<div style="padding-top: 30px;">
+								<p class="leg">FOOTBALL HISTORY</p>
+								<p>Real Madrid History</p>
+							</div>
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="mobile-legend">
+							<div class="legend-image"><img src="img/flegends.jpg" width="150" height="170"></div>
+							<div style="padding-top: 30px;">
+								<p class="leg">FOOTBALL LEGENDS</p>
+								<p>Legendary Real Madrid Players</p>
+							</div>
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="mobile-legend">
+							<div class="legend-image"><img src="img/bhistory.jpg" width="150" height="170"></div>
+							<div style="padding-top: 30px;">
+								<p class="leg">BASKETBALL HISTORY</p>
+								<p>Real Madrid Basketball History</p>
+							</div>
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="mobile-legend">
+							<div class="legend-image"><img src="img/blegends.jpg" width="150" height="170"></div>
+							<div style="padding-top: 30px;">
+								<p class="leg">BASKETBALL LEGENDS</p>
+								<p>Legendary Real Madrid Players</p>
+							</div>
+						</div>
+					</a>
+			</div>
+		</div>
+		
+		
 		<div class="clear"></div>
 		
-		<div id="specialfeatures">
+		<div id="specialfeatures" class="mobile-hide">
 			<div id="specialfeatures_in" style="display: inline-block;">
 					<p id="sf">SPECIAL FEATURES</p>
 				
@@ -520,7 +677,7 @@
 					<a href="#"><div class="legend">
 						
 						<div><img src="img/sf2.jpg" width="218" height="258"></div>
-						<p class="leg" style="width: 214px;padding-top: -20px;margin-top: 3px;margin-bottom: 6px">ALFREDO DI STEFANO, THE BEST PLAYER OF ALL TIME</p>
+						<p class="leg" style="width: 214px;padding-top: 0px;margin-top: 3px;margin-bottom: 6px">ALFREDO DI STEFANO, THE BEST PLAYER OF ALL TIME</p>
 					</div></a>
 					
 					<a href="#"><div class="legend">
@@ -529,7 +686,7 @@
 						<p class="leg">WORLD CHAMPIONS</p>
 					</div></a>
 					
-					<a href="#"><div class="legend">
+					<a href="#"><div class="legend"  style="margin-right: 0px;">
 						
 						<div><img src="img/sf4.jpg" width="218" height="258"></div>
 						<p class="leg">A DREAM STADIUM</p>
@@ -539,11 +696,56 @@
 			</div>
 		</div>
 		
-		<div class="clear"></div>
+		
+		<div id="mobile-specialfeatures">
+			<div id="mobile-legend-in">
+					<a href="#">
+						<div class="mobile-specialfeatures">
+							<div class="legend-image"><img src="img/sf1.jpg" width="100" height="120"></div>
+							<div class="sf-description">
+								<p id="m-sf">SPECIAL FEATURES</p>
+								<p class="leg">THE TENTH</p>
+							</div>
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="mobile-specialfeatures">
+							<div class="legend-image"><img src="img/sf2.jpg" width="100" height="120"></div>
+							<div class="sf-description">
+								<p id="m-sf">SPECIAL FEATURES</p>
+								<p class="leg">ALFREDO DI STEFANO, THE BEST PLAYER OF ALL TIME</p>
+							</div>
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="mobile-specialfeatures">
+							<div class="legend-image"><img src="img/sf3.jpg" width="100" height="120"></div>
+							<div class="sf-description">
+								<p id="m-sf">SPECIAL FEATURES</p>
+								<p class="leg">WORLD CHAMPIONS</p>
+							</div>
+						</div>
+					</a>
+					
+					<a href="#">
+						<div class="mobile-specialfeatures">
+							<div class="legend-image"><img src="img/sf4.jpg" width="100" height="120"></div>
+							<div class="sf-description">
+								<p id="m-sf">SPECIAL FEATURES</p>
+								<p class="leg">A DREAM STADIUM</p>
+							</div>
+						</div>
+					</a>
+					
+					<p id="sm">SEE MORE SPECIAL FEATURES</p>
+			</div>
+		</div>
 		
 		<div id="carousel">
 		
-					<a href="#"><img src="img/tleft.png" id="left" style="visibility: hidden;" class="fa-left"></a>
+				<a href="#"><img src="img/tleft.png" id="left" style="visibility: hidden;" class="fa-left"></a>
 					<div id="overflow">
 						<div id="inner">
 							<img class="show1" src="img/t1.jpg">
@@ -561,16 +763,11 @@
 							<img class="show1" src="img/t13.jpg">
 						</div>
 					</div>		
-					<a href="#" ><img src="img/tright.png" id="right" class="fa-right"></a>
+				<a href="#" ><img src="img/tright.png" id="right" class="fa-right"></a>
 		</div>
-			
 		
 		
-		<div class="clear"></div>
-		
-		<hr>
-
-		<div id="ads">
+		<div id="ads" class="mobile-hide">
 			
 			<div style="display: inline-block;">
 					<div class="ad" style="margin-bottom: 64px;">
@@ -605,6 +802,17 @@
 			</div>		
 		</div>
 		
+		<div id="ad-mobile">
+			<div class="ad-mobile-img">	
+				<a href=""><div><img src="img/mobilead2.jpg" width="80%" height="80"></div></a>
+			</div>
+			
+			<div class="ad-mobile-img">	
+				<a href=""><div><img src="img/mobilead1.jpg" width="80%" height="80"></div></a>
+			</div>
+		</div>
+		
+		
 		<div class="clear"></div>
 		
 		<hr>
@@ -622,7 +830,7 @@
 		
 		<hr>
 		
-		<div id="sitemap" style="/* display: inline-block; */text-align: center;">
+		<div id="sitemap" class="mobile-hide" style="text-align: center;">
 				
 				<div class="items">
 					
@@ -702,9 +910,38 @@
 				
 		</div>
 		
+		<div id="mobile-sitemap">
+			<div class="mobile-sitemap-wrapper">
+				<div class="items">
+					<a href="#"><span>FOOTBALL</span></a>
+				</div>
+				<div class="items">
+					<a href="#"><span>BASKETBALL</span></a>
+				</div>
+				<div class="items">
+					<a href="#"><span>ABOUT REAL MADRID</span></a>
+				</div>
+				<div class="items">
+					<a href="#"><span>MEMBERS</span></a>
+				</div>
+				<div class="items">
+					<a href="#"><span>FANZONE</span></a>
+				</div>
+				<div class="items">
+					<a href="#"><span>RMTV</span></a>
+				</div>
+				<div class="items" style="display:block;">
+					<a href="#"><span style="padding-right: 18px;">SIGNUP</span></a>
+					<a href="#"><span style="padding-right: 18px;">HOSPITALITY</span></a>
+					<a href="#"><span>SEE ALL SPONSORS</span></a>
+				</div>
+			</div>
+		</div>
+		
 		<div class="clear"></div>
 		
 		<hr>
+		
 		
 		<div id="sponsors">
 		
@@ -739,22 +976,18 @@
 				<a href="#"><img img id="tecate" class="hideshow ds" data-target="#tecate" src="img/tecate.png" width="120" height="100"></i></a>
 			</div>
 			
-		<div>
+		</div>
+		
 		
 		<hr>
 		
 		<div id="last">
-			<p>Real Madrid &#169 2016 All rights reserved</p>
-			
-			<ul>
-				<li><a href="#">SEE ALL SPONSORS</a></li>
-				<li><a href="#">Legal Notice</a</li>
-				<li><a href="#">Privacy Policy</a</li>
-			<ul>
-			
+			<p>Real Madrid &#169 2016 All rights reserved</p>	
 		</div>
 		
-		
 	</div>
+	
+	<div id = "overlay"></div>
+	
 </body>
 </html>
