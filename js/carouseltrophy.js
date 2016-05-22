@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-			if ($('#highlightsbanner img').height() == 300 ){
+	if ($('#highlightsbanner img').height() <= 300 ){
 			
 				console.log("inside 300");
 	$("#left").css('visibility','hidden');

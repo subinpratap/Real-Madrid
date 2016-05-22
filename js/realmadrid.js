@@ -1,4 +1,16 @@
 $(document).ready(function() {
+
+	$(window).bind('scroll', function() {
+	   var navHeight = $( window ).height() - 550;
+			 if ($(window).scrollTop() > navHeight) {
+				 $('.dropdowns').addClass('fixed');
+			 }
+			 else {
+				 $('.dropdowns').removeClass('fixed');
+			 }
+		});
+
+	
 	$('.dropdowncon').hover(handlerIn, handlerOut);
 	
 	$('#share').hover(shareOn,shareOff);

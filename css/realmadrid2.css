@@ -163,17 +163,29 @@ ul {
 	/*border-right: 1px solid #CCD1D1;*/
 	font-weight:bold;
 	color: blue !important;
+	 margin-left: 10px !important;
 }
 
+.fixed{
+    position: fixed !important;
+    top: 0px;
+}
+.dropdown-container{		
+	margin-left: 14%;						
+}
+
+
 .dropdowns {
-	display: table;
-    margin: 0 auto;
-	padding-top: 12px;
+	background-color: white;		
+	width: 100%;		
+	z-index: 88;		
+	border-bottom: 1px solid;
 	clear:both;
+	padding-top: 12px;
 }
 
 .dropdowns ul li{
-	float:left;
+	display: inline-block;
 	list-style:none;
 	text-decoration:none;
 	margin-left:28px;
@@ -208,6 +220,7 @@ ul {
 }
 
 .left ul li{
+	width: 310px;
 	float:none !important;
     font-size: 17px !important;
 	/*padding:10px;*/
@@ -253,10 +266,12 @@ ul {
 
 #searchdiv{
 	/*margin-top: 14px;*/
-	    margin: 14px -6px 0px -5px;
+	    margin: 0px -6px 0px -5px;
     background-color: #F2F2F2;
     height: 114px;
 	display:none;
+	position: relative;		
+	top: 3px;
 } 
 
 #search{
