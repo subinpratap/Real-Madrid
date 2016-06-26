@@ -10,6 +10,13 @@ $(document).ready(function() {
 			 }
 		});
 
+	$(function() {
+		$(".rslides").responsiveSlides({
+			 timeout: 7000, 
+			 speed:1500
+		});
+	 });
+	
 	
 	$('.dropdowncon').hover(handlerIn, handlerOut);
 	
@@ -24,11 +31,7 @@ $(document).ready(function() {
 				$("#searchdiv").hide();
 		});
 		
-	//$(window).scroll(function () {
-   //if ($(window).scrollTop()> 100) {
-   //     $('.dropdown').css('top', $(window).scrollTop());
-  //  }
-	//});
+	
 	
 	$('#click').on('click',function(){
 		if($('#matchsummary').css('display')!='none'){
@@ -39,6 +42,11 @@ $(document).ready(function() {
 	});
 	
 });
+
+
+if ( $( this ).hasClass( "show" ) ) {
+			
+		}
 
 function handlerIn() {
 	//console.log($(this));

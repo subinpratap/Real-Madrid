@@ -4,6 +4,11 @@ body{
 	line-height: 1.3;
 }
 
+.fix_body{
+	position:fixed;
+	display:block;
+}
+
 .show{
 	display:block;
 }
@@ -32,26 +37,6 @@ ul {
     margin-left: 14px;
     border-left: 1px solid #ccc;
 }
-
-.mob-navbar{
-	display:none;
-}
-
-.navbar-collapse.collapse {
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
-}
-
-.navbar-collapse {
-    width: auto;
-    border-top: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-
 
 #header{
 	margin: 0 auto;
@@ -170,9 +155,6 @@ ul {
     position: fixed !important;
     top: 0px;
 }
-.dropdown-container{		
-	margin-left: 14%;						
-}
 
 
 .dropdowns {
@@ -182,6 +164,7 @@ ul {
 	border-bottom: 1px solid;
 	clear:both;
 	padding-top: 12px;
+	text-align:center;
 }
 
 .dropdowns ul li{
@@ -212,6 +195,7 @@ ul {
     width: 310px;
 	border-left: none;
     border-top: none;
+	text-align: initial;
 }
 
 .left ul{
@@ -313,6 +297,39 @@ ul {
 	height:400px;
 }
 
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
 .banner img{
 	width:33.33%;
 	height:264px;
@@ -380,6 +397,7 @@ ul {
     border: 1px solid #D9D9D9;
     margin-top: -81px;
     position: relative;
+	z-index:2;
 }
 
 
@@ -1109,7 +1127,7 @@ img.ds{
 	}
 	
 	.mob-navbar{
-		display:block;
+		/*display:block;*/
 	}
 	
 	#fixture {
